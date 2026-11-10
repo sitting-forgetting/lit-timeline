@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中国现当代文学时间轴 · 课文 · 思潮 · 人物</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <h1>中国现当代文学时间轴</h1>
+    <span class="sub">课文 · 思潮 · 人物 · 二轮复习</span>
+  </div>
+  <div class="tools">
+    <div class="search" id="search">
+      <span class="ico">⌕</span>
+      <input id="q" type="text" placeholder="搜索作家 / 作品 / 流派" autocomplete="off" spellcheck="false">
+      <button class="clr" id="qClear" type="button" title="清除">×</button>
+    </div>
+    <button class="btn icon" id="zoomOut" type="button" title="缩小">−</button>
+    <button class="btn icon" id="zoomIn" type="button" title="放大">＋</button>
+    <button class="btn" id="fit" type="button" title="全览 (0)">全览</button>
+    <button class="btn primary" id="quizBtn" type="button">复习自测</button>
+    <button class="btn" id="printBtn" type="button">打印背诵版</button>
+  </div>
+</header>
+
+<div class="filters">
+  <div class="chiprow">
+    <span class="f-label">时期</span>
+    <div class="chiprow" id="chips-period"></div>
+  </div>
+  <div class="chiprow">
+    <span class="f-label">轨道</span>
+    <div class="chiprow" id="chips-lane"></div>
+  </div>
+  <div class="chiprow">
+    <span class="f-label">标签</span>
+    <div class="chiprow" id="chips-tag"></div>
+  </div>
+  <div class="stat" id="stat"></div>
+</div>
+
+<main class="stage" id="stage">
+  <div class="axis-row" id="axis"></div>
+  <div class="period-row" id="period"></div>
+  <div class="lanes" id="lanes">
+    <div class="tl" id="tl"></div>
+  </div>
+  <div class="mob" id="mob"></div>
+  <div class="foot">
+    <span>拖动平移</span><i>·</i>
+    <span>⌘/Ctrl + 滚轮缩放</span><i>·</i>
+    <span>点击条目看考点</span><i>·</i>
+    <span>双击条目居中</span><i>·</i>
+    <span>←/→ 平移</span><i>·</i>
+    <span>0 全览</span><i>·</i>
+    <span>/ 搜索</span>
+  </div>
+</main>
+
+<aside class="drawer" id="drawer" aria-live="polite"></aside>
+
+<div class="quiz" id="quiz"><div class="quiz-box" id="quizBox"></div></div>
+
+<section class="print-only" id="printList"></section>
+
+<script src="data/events.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
